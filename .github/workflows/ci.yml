@@ -1,0 +1,25 @@
+name: CI_Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest #runner
+
+    steps:
+      - uses: action/checkout@v4
+
+      - name: Checkout code
+        run: |
+          echo "This is my first build"
+          uname -a
+
+      - name: Check Docker Installation
+        run: |
+          docker info
+      - name: Rune Docker container
+        run : |
+          docker run hello-world
