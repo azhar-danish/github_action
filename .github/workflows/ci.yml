@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest #runner
 
     steps:
-      - uses: action/checkout@v4
-
       - name: Checkout code
         run: |
           echo "This is my first build"
